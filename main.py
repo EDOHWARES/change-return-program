@@ -25,8 +25,21 @@ while not amount_given.isdigit() or int(amount_given) < 10:
 
 def change(given, product_cost):
 
+    in_dollars = f"$-{int(given) - int(product_cost)}"
+    in_quarters = f"(¼)-{(int(given) - int(product_cost)) / 4}"
+    in_dimes = f"#-{(int(given) - int(product_cost)) / 10}"
+    in_nickels = f"Ni-{(int(given) - int(product_cost)) / 20}"
+    in_pennies = f"¢-{(int(given) - int(product_cost)) / 100}"
+
     if int(given) > int(product_cost):
-        return f"Your change is NGN{int(given) - int(product_cost)}"
+        return f"""
+Your change is:
+{in_dollars} in dollars
+{in_quarters} in quarters
+{in_dimes} in dimes
+{in_nickels} in nickels
+{in_pennies} in pennies
+"""
     elif int(given) == int(product_cost):
         return "Product cost is equal amount given, therefore you deserve no change!"
     else:
