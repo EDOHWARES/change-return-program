@@ -1,0 +1,9 @@
+1. Prompt user to input cost of product
+    . Validate the input
+
+2. Prompt user to input the amount given
+    . Validate the input
+
+3. Return the change supposed-fully allocated to the user
+
+# Build a function that can validate both the cost input and the amount given input
